@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Entre Tanto Blog</title>
+    <style>
+        .complete{
+            background-color: green;
+            color: white;
+        }
+        #imagen{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md navbar-light container menustyle">
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#toggleMobileMenu"
+                aria-controls="toggleMobileMenu"
+                aria-expanded="false"
+                aria-lable="Toddle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="toggleMobileMenu">
+                <ul class="navbar-nav  mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MANUALIDADES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DECO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">MINDFULLNESS</a>
+                </ul>
+                <a href="#" class="navbar-brand">
+                    <img src="logo.png" alt="logo" width="200" height="200" 
+                    class="d-inline-block align-top d-sm-none d-md-inline-block"/>
+                </a>
+                <ul class="navbar-nav  mx-auto text-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACTO</a>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button id="buscar" class="btn btn-outline-dark" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-6 d-inline-block">
+                    <h2>lorem</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa, iure, facere porro dicta quisquam corporis molestiae repudiandae quis eius aliquam? Neque ipsum ad optio eius omnis minus sapiente mollitia.</p>
+                    <ul id="lorem">
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                    <button id="btndup" class="btn btn-outline-dark">Ocultar Deslizando</button>
+                    <button id="btndown" class="btn btn-outline-dark">Deslizar</button>
+                    <button id="btntoggle" class="btn btn-outline-dark">Desplegar</button>
+                </div>
+                <div class="col-6 d-inline-block">
+                    <h2>lorem</h2>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis ipsa, iure, facere porro dicta quisquam corporis molestiae repudiandae quis eius aliquam? Neque ipsum ad optio eius omnis minus sapiente mollitia.</p>
+                    <ul id="lorem2">
+                        <li>lorem</li>
+                        <li>lorem</li>
+                        <li>lorem</li>
+                    </ul>
+                    <button id="btnin" class="btn btn-outline-dark">Aparecer</button>
+                    <button id="btnout" class="btn btn-outline-dark">Desvanecer</button>
+                    <button id="btntoggleslide" class="btn btn-outline-dark">Desplegar Deslizando</button>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <h2 class="col-12 text-center">Muestra de Trabajos</h2>
+                <img id="imagen" class="mx-auto" src="1.jpg">
+            </div>
+        </div>
+        <div class="container text-center p-4">
+            <h1>Inscribirme en Newsletter</h1>
+            <div class="row" action="process.php" method="post">
+                <p class="col-12"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente aliquam debitis in voluptates repudiandae tempora quod ipsam quae aperiam, facere vitae sit cupiditate amet distinctio. At ea adipisci error? Harum.</p>
+                <div class="col-12 mb-3">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <button id=val class="btn btn-outline-dark m-3">Valor Nombre</button>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class= "col-12 mb-3">
+                    <p>Qué es lo que más te gusta hacer?</p>
+                    <select name="favorito">
+                        <option value="coserbordartejer">Coser, Bordar y Tejer</option>
+                        <option value="deco">Decoración</option>
+                        <option value="arte">Pintar y Dibujar</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <button id=append class="btn btn-outline-dark m-3">Quiero sugerir un tema</button>
+                    <div id="result"></div>
+                </div>
+                <div class="col-12 d-inline-block">
+                    <input type="radio" name="condiciones" value="condiciones">
+                    <label id="btn-condiciones" for="Condiciones">Acepto los términos y condiciones de privacidad.</label>
+                    <div>
+                        <p id="condiciones">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, quaerat voluptates, excepturi cupiditate suscipit incidunt maiores perspiciatis quia aliquam nemo officiis, autem dolore natus eaque doloremque odio nobis dolorem assumenda.</p>
+                    </div>
+                    <button id="btnHide" class="btn btn-outline-dark">Ocultar</button>
+                    <button id="btnShow" class="btn btn-outline-dark">Mostrar</button>
+                </div>
+                <div class="col-12 d-inline-block mt-5">
+                    <input id="enviar" type="submit" value="Enviar">
+                    <p id="status">Estado: Pendiente</p>
+                </div>
+            </div>
+        </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script>
+        $('#buscar').hover(function(){
+            alert("Se abrirá una nueva pestaña si buscas algo");
+        });
+        $('#btndup').click(function(){
+            $('#lorem').slideUp();
+        });
+        $('#btndown').click(function(){
+            $('#lorem').slideDown();
+        });
+        $('#btntoggle').click(function(){
+            $('#lorem').toggle();
+        });
+        $('#btnin').click(function(){
+            $('#lorem2').fadeIn();
+        });
+        $('#btnout').click(function(){
+            $('#lorem2').fadeOut();
+        });
+        $('#btntoggleslide').click(function(){
+            $('#lorem2').slideToggle();
+        });
+        $('#imagen').click(function(){
+            $('#imagen').attr('src', '2.jpg');
+        });
+        $('#val').click(function(){
+            let nombre = $('#nombre').val();
+            alert(nombre);
+        });
+        $('#append').click(function(){
+            $('#result').append('<textarea name="description"></textarea>');
+        })
+        $('#btnHide').click(function(){
+            $('#condiciones').hide();
+        });
+        $('#btnShow').click(function(){
+            $('#condiciones').show();
+        });
+        $('#enviar').click(function(){
+            $('#status').html('Estado: Completo');
+        });
+        $('#enviar').click(function(){
+            $('#status').before('Ha cambiado el estado de tu solicitud');
+        })
+        $('#enviar').click(function(){
+            $('#status').after('Bienvenido a nustra comunidad, recuerda revisar tu mail de confirmacion.');
+        })
+        $('#enviar').click(function(){
+            $('#status').addClass('complete');
+        })
+        $('#enviar').click(function(){
+            let myText = $('<p>Gracias por inscribirte!</p>').text();
+            alert(myText);
+        })
+    </script>
+
+</body>
+</html>
